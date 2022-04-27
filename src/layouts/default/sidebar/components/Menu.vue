@@ -3,7 +3,7 @@
     v-model:openKeys="openKeys"
     v-model:selectedKeys="selectedKeys"
     mode="inline"
-    theme="dark"
+    :theme="theme.getTheme"
     :inline-collapsed="getCollapsed"
   >
     <a-sub-menu key="sub1">
@@ -83,8 +83,10 @@ import {
 } from '@ant-design/icons-vue'
 
 import { useCollapsed } from '~/layouts/default/useCollapsed'
+import { themeStore } from '~/stores/modules/theme'
 
 const { getCollapsed } = useCollapsed()
+const theme = themeStore()
 
 const selectedKeys = ref(['1'])
 const openKeys = ref(['sub1'])

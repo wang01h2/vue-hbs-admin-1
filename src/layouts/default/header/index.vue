@@ -4,6 +4,7 @@
       <sider-trigger class="layout-header-action" />
     </div>
     <div class="flex h-full">
+      <switch-theme class="layout-header-action" />
       <full-screen class="layout-header-action" />
       <user-dropdown class="layout-header-action" />
       <setting-drawer class="layout-header-action" />
@@ -18,7 +19,7 @@ import SiderTrigger from './components/SiderTrigger.vue'
 import FullScreen from './components/FullScreen.vue'
 import UserDropdown from './components/UserDropdown.vue'
 import SettingDrawer from './components/SettingDrawer.vue'
-
+import SwitchTheme from './components/SwitchTheme.vue'
 const { getCollapsed } = useCollapsed()
 
 const getHeaderClass = computed(() => {

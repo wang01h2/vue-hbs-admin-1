@@ -4,5 +4,7 @@ export enum EnumCache {
   // user info key
   USER_INFO_KEY = 'USER__INFO__',
   // role info key
-  ROLES_KEY = 'ROLES__KEY__'
+  ROLES_KEY = 'ROLES__KEY__',
+  // theme info key
+  THEME_KEY = 'THEME__KEY__'
 }

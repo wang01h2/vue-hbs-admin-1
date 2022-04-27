@@ -5,6 +5,7 @@
     :trigger="null"
     collapsible
     collapsed-width="56"
+    :theme="theme.getTheme"
   >
     <logo :show-title="!getCollapsed" />
     <Menu />
@@ -16,9 +17,9 @@ import { useCollapsed } from '../useCollapsed'
 
 import Logo from './components/Logo.vue'
 import Menu from './components/Menu.vue'
-
+import { themeStore } from '~/stores/modules/theme'
+const theme = themeStore()
 const { getCollapsed } = useCollapsed()
-
 const getSidebarClass = computed(() => {
   return ['layout-sidebar', 'layout-sidebar--fixed']
 })
